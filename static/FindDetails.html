@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>发现详情</title>
+</head>
+<style>
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+  }
+
+  .pd40 {
+    padding: 0 20px;
+  }
+
+  .article {
+    min-height: 3rem;
+    overflow-x: hidden;
+    text-align: justify;
+  }
+
+  .article img {
+    width: 100%;
+    display: block;
+  }
+
+  .article p span {
+    font-size: 12px;
+  }
+
+</style>
+
+<body>
+  <div class="article pd40" style="word-break: break-all;word-wrap: break-word;">
+  </div>
+  <script src="./js/jquery.min.js"></script>
+  <script>
+    function getUrlParam(n) {
+      var a = new RegExp("(^|&)" + n + "=([^&]*)(&|$)"),
+        t = window.location.search.substr(1).match(a);
+      return null != t ? decodeURI(t[2]) : null
+    }
+    var header = {
+      'Device': getUrlParam('device'), // 平台
+      'Version': '1.0.1', // 渠道下App版本
+      'System': '1.0.1', // 操作系统版本
+      'source': 'wap', // 平台
+      'Authorization': getUrlParam('token')
+    }
+
+    function article_() {
+      $.ajax({
+        url: 'http://api.daidai123.cn/api/v1/detail/' + getUrlParam('id'),
+        type: 'GET',
+        dataType: 'JSON',
+        headers: {},
+        success: function (res) {
+          if (res.code === 200) {
+            content = res.data.content
+            $('.article').append(content)
+          } else {
+            console.log(res.info)
+          }
+        },
+        error: function () {
+          flag = false
+        }
+      })
+    }
+    article_();
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,287 @@
+.footer .van-tabbar{
+  height: 100%;
+  position: relative;
+}
+// 贷款、信用卡列表
+.apply .van-tabs__line{
+  display: none;
+}
+.apply .van-hairline--top-bottom::after {
+  border: none;
+}
+.apply  .van-tabs__nav--line{
+  height: .8rem;
+  line-height: .8rem;
+}
+.apply .van-tabs__nav{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: .88rem;
+  justify-content: center;
+}
+.apply .van-tab--active{
+  color: #2e6eec;
+  box-sizing: border-box;
+  border-bottom: .03rem solid #2e6eec;
+}
+.apply .van-tab{
+  flex: none;
+  padding: 0;
+  margin: 0 .4rem;
+  font-weight: bold;
+  font-size: .36rem;
+  letter-spacing: .01rem;
+}
+.apply{
+  .van-tabs__wrap{
+    position: absolute;
+    top: .0rem;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    overflow: hidden;
+    height: .88rem;
+    // border-bottom: 1px solid #edeff5;
+  }
+  .nobor{
+    border-bottom: none;
+  }
+  .bor_b{
+    .van-tabs__wrap{
+      border-bottom: 1px solid #edeff5;
+    }
+  }
+  .van-tabs__nav--line{
+    padding-bottom: 0;
+  }
+}
+// 申请意向列表
+.intention .van-tabs__line{
+  display: none;
+}
+.intention .van-hairline--top-bottom::after {
+  border: none;
+}
+.intention  .van-tabs__nav--line{
+  height: .8rem;
+  line-height: .8rem;
+}
+.intention .van-tabs__nav{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: .88rem;
+  justify-content: center;
+
+}
+.intention .van-tab--active{
+  color: #2e6eec;
+  box-sizing: border-box;
+  border-bottom: .03rem solid #2e6eec;
+}
+.intention .van-tab{
+  flex: none;
+  padding: 0;
+  margin: 0 .4rem;
+  font-weight: bold;
+  font-size: .36rem;
+  letter-spacing: .01rem;
+}
+.intention{
+  .van-tabs__wrap{
+    position: absolute;
+    top: .0rem;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    overflow: hidden;
+    height: .88rem;
+    border-bottom: 1px solid #edeff5;
+  }
+  .van-tabs__nav--line{
+    padding-bottom: 0;
+  }
+}
+// 我的收藏
+.collect{
+  [class*=van-hairline]::after{
+    border: none;
+  }
+  .van-tabs__nav{
+    position: absolute;
+    left: 0;
+    right: 0;
+    // top: .88rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 .4rem;
+    height: .88rem;
+  }
+  .van-tabs--line .van-tabs__wrap{
+    height: .88rem;
+  }
+  .van-tab{
+    flex: none;
+    padding: 0;
+    // margin: 0 .4rem;
+    font-size: .26rem;
+    color: #101d37;
+    letter-spacing: .01rem;
+    
+  }
+  .van-tab--active{
+    color: #2e6eec;
+    height: .88rem;
+    border-bottom: .02rem solid #2e6eec;
+  }
+  .van-tab:nth-child(3){
+    margin-right: .4rem!important;
+  }
+  .van-tabs__content{
+    height: calc(100vh - 1.03rem);
+    overflow-y: scroll;
+  }
+  .van-tabs--line{
+    padding-top: .88rem;
+  }
+  .van-tabs__line{
+    display: none;
+  }
+  .van-tabs__wrap{
+    position: relative;
+    border-bottom: 1px solid #edeef5;
+  }
+}
+// 信用卡收藏
+.bg_white{
+  .van-tabs__content{
+    background-color: #fff;
+  }
+}
+// 首页轮播
+.banner{
+  .van-swipe__indicator{
+    background-color: #ffffff;
+    opacity: 0.6;
+    margin-bottom: .1rem;
+  }
+  .van-swipe__indicator.van-swipe__indicator--active{
+    background-color: #fff;
+    opacity: 1;
+  }
+  .van-swipe{
+    border-radius: .16rem;
+  }
+  .van-swipe__track{
+    transition-duration: 300ms!important;
+    transition-timing-function: linear;
+  }
+  
+}
+// 新手帮助
+// .newhelp{
+//   padding: 0 .4rem;
+//   background-color: #fff;
+//   height: 100vh;
+//   .van-cell{
+//     // padding: .45rem 0;
+//     padding: .4rem 0 .37rem 0
+//   }
+//   .van-cell__title{
+//     font-weight: 600;
+//     font-size: .3rem;
+//     width: 90%;
+//     color: #101d37;
+//     span{
+//       word-wrap:break-word;
+//     }
+//   }
+//   .van-cell__right-icon{
+//     margin-left:.4rem ;
+//   }
+//   .van-collapse-item__content{
+//     color: #7f8799;
+//     font-size: .28rem;
+//     padding: 0;
+//   }
+//   .van-cell.van-cell--clickable.van-hairline.van-collapse-item__title::after{
+//     border: none;
+//   }
+// }
+// 退出登录
+.outLoginBtn{
+  .van-popup{
+  width: 5.4rem;
+	height: 2.53rem;
+	background-color: #f7f7f7;
+  opacity: 0.96;
+  border-radius: .2rem;
+  text-align: center;
+  box-sizing: border-box;
+  .isOutLogin{
+    color: #000;
+    font-size: .34rem;
+    letter-spacing: .01rem;
+    margin-top: .5rem;
+  }
+  .isBtn{
+    font-size: .34rem;
+    margin-top: .5rem;
+    display: flex;
+    justify-content: space-around;
+    color: #007aff;
+    border-top: .01rem solid #d4d5d7;
+    padding: 0 .4rem;
+    span{
+      padding-top:.3rem;
+    }
+    label{
+      display: inline-block;
+      width: 1px;
+      height: 1.05rem;
+      background-color: #d4d5d7;
+      vertical-align: middle;
+      }
+    }
+  }
+  .van-modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
+  }
+}
+// 分享
+// .shareAlert{
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   // bottom: 0;
+//   bottom: 3.8rem; //修改
+//   z-index: 100;
+//   background-color: rgba(0, 0, 0, 0.4);
+//   box-sizing: border-box;
+//   .van-popup{
+//     width: 100%;
+//     height: 3.8rem;
+//     background-color: #fff;
+//     box-sizing: border-box;
+//     opacity: 1;
+    
+//   }
+//   .isBtn{
+//     background-color: #fff;
+//     font-size: .3rem;
+//     color: #101d37;
+//     letter-spacing: .01rem;
+//     text-align: center;
+//     line-height: 1rem;
+//     font-weight: 700;
+//   }
+// }
